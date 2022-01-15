@@ -6,7 +6,7 @@ export default function AirQualityCircle({ pm25 }) {
 
   return (
     <Tooltip text={airQualityAttributes(pm25).levelOfConcern}>
-      <div className={circleStackClass}>
+      <div className={`circle-stack ${circleStackClass}`}>
         <span className={pointsIndicatorClass}>
           {" "}
           <div>{isNaN(pm25) ? "" : pm25}</div>

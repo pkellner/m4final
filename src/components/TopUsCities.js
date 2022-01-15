@@ -7,7 +7,7 @@ import { Suspense } from "react";
 function TopUsCities() {
   function TopUsCitiesFallback() {
     return (
-      <div className="container-fluid grid">
+      <div className="container-fluid mt-4">
         <div className="row">
           <div className="col-sm-12 col-lg-3 col-md-6">
             <CityListItemsFallback />
@@ -25,7 +25,7 @@ function TopUsCities() {
 
   function ProcessDataAndRender() {
     return (
-      <div className="container-fluid grid">
+      <div className="container-fluid mt-4">
         <div className="row">
           <div className="col-sm-12 col-lg-3 col-md-6">
             <CityListItems />
@@ -37,23 +37,20 @@ function TopUsCities() {
             <Legend />
           </div>
         </div>
-        <br />
         <hr />
-        <i>
+        <p className="text-center">
           * Data provided using the (c) PurpleAir API. Though multiple sensors
           are available for each city, this data is simply taking the closes
           sensor to city center and using that. A better statistical approach
           could be taken and may be in the future as there are often many
           sensors in cities.
-        </i>
-        <br />
-        <br />
-        <i>
+        </p>
+        <p className="text-center">
           ** For further information contact{" "}
           <a href="https://peterkellner.net/">
             https://peterkellner.net/contact
           </a>
-        </i>
+        </p>
         .
       </div>
     );

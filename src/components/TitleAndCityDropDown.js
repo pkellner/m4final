@@ -3,11 +3,13 @@ import CityMaxCntDropDownList from "./CityMaxCntDropDownList";
 export function TitleAndCityDropDown() {
   return (
     <div className="container-fluid">
-      <div className="d-flex justify-content-between">
-        <div className="">
-          <h3>Top United States Cities Air Quality and Temperature</h3>
+      <div className="header-toolbar row">
+        <div>
+          <h3>Top United States cities air quality and temperature</h3>
         </div>
-        <CityMaxCntDropDownList />
+        <div className="selector">
+          <CityMaxCntDropDownList />
+        </div>
       </div>
     </div>
   );

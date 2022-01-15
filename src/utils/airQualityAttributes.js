@@ -1,7 +1,7 @@
 export default function airQualityAttributes(pm25) {
   const aqiValues = [
     {
-      circleStackClass: "circle-stack-gray",
+      circleStackClass: "circle-stack-default",
       pointsIndicatorClass: "points-indicator-gray",
       color: "Gray",
       levelOfConcern: "",
@@ -10,7 +10,7 @@ export default function airQualityAttributes(pm25) {
       description: "",
     },
     {
-      circleStackClass: "circle-stack-green",
+      circleStackClass: "circle-stack-good",
       pointsIndicatorClass: "points-indicator-gray",
       color: "Green",
       levelOfConcern: "Good",
@@ -20,8 +20,8 @@ export default function airQualityAttributes(pm25) {
         "Air quality is satisfactory, and air pollution poses little or no risk",
     },
     {
-      circleStackClass: "circle-stack-yellow",
-      pointsIndicatorClass: "points-indicator-black",
+      circleStackClass: "circle-stack-moderate",
+      pointsIndicatorClass: "points-indicator-gray",
       color: "Yellow",
       levelOfConcern: "Moderate",
       minValue: 51,
@@ -30,8 +30,8 @@ export default function airQualityAttributes(pm25) {
         "Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution",
     },
     {
-      circleStackClass: "circle-stack-orange",
-      pointsIndicatorClass: "points-indicator-white",
+      circleStackClass: "circle-stack-sensitive",
+      pointsIndicatorClass: "points-indicator-gray",
       color: "Orange",
       levelOfConcern: "Unhealthy for Sensitive Groups",
       minValue: 101,
@@ -40,8 +40,8 @@ export default function airQualityAttributes(pm25) {
         "Air quality is acceptable. However, there may be a risk for some people, particularly those who are unusually sensitive to air pollution",
     },
     {
-      circleStackClass: "circle-stack-red",
-      pointsIndicatorClass: "points-indicator-white",
+      circleStackClass: "circle-stack-unhealthy",
+      pointsIndicatorClass: "points-indicator-gray",
       color: "Red",
       levelOfConcern: "Unhealthy",
       minValue: 151,
@@ -50,8 +50,8 @@ export default function airQualityAttributes(pm25) {
         "Some members of the general public may experience health effects; members of sensitive groups may experience more serious health effects",
     },
     {
-      circleStackClass: "circle-stack-purple",
-      pointsIndicatorClass: "points-indicator-white",
+      circleStackClass: "circle-stack-very-unhealthy",
+      pointsIndicatorClass: "points-indicator-gray",
       color: "Purple",
       levelOfConcern: "Very Unhealthy",
       minValue: 201,
@@ -60,8 +60,8 @@ export default function airQualityAttributes(pm25) {
         "Health alert: The risk of health effects is increased for everyone",
     },
     {
-      circleStackClass: "circle-stack-maroon",
-      pointsIndicatorClass: "points-indicator-white",
+      circleStackClass: "circle-stack-hazardous",
+      pointsIndicatorClass: "points-indicator-gray",
       color: "Maroon",
       levelOfConcern: "Hazardous",
       minValue: 301,

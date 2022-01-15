@@ -10,11 +10,11 @@ export const CityListItemsFallback = () => {
     .fill(null)
     .map((_, i) => i);
   return (
-    <div>
+    <div className="city">
       {dummyArray.map(function (rec, index) {
         return (
           <ul key={index} className="list-group">
-            <li className="list-group-item list-group-item-city-list-height mt-1 mb-1 bg-light">
+            <li className="city-list">
               <CityLinkButtonFallback />
             </li>
           </ul>
@@ -56,7 +56,7 @@ function CityListItems() {
     }, [data, setSelectedCityId, setSelectedCityName, setSelectedStateName]);
 
     return (
-      <div>
+      <div className="city">
         {data
           ?.sort((a, b) => {
             if (a.pm25 > b.pm25) return -1;
@@ -70,8 +70,8 @@ function CityListItems() {
                   className={
                     rec.id === selectedCityId ||
                     (!selectedCityId && index === 0)
-                      ? "list-group-item list-group-item-city-list-height mt-1 mb-1 border-dark"
-                      : "list-group-item list-group-item-city-list-height mt-1 mb-1 bg-light"
+                      ? "city-list active"
+                      : "city-list"
                   }
                 >
                   <a
