@@ -39,6 +39,7 @@ jobs:
           STATIC_RENDER_MINIMIZE: ${{secrets.STATIC_RENDER_MINIMIZE}}
         run: |
           RELEASEVERSION=3.0
+
           # RELEASEVERSION=$(cat version.txt) 
           # https://github.community/t/wanting-to-add-a-build-date-and-time-to-my-github-action/220185/6'
           #
