@@ -3,13 +3,15 @@ import AirQualityCircle from "./AirQualityCircle";
 
 export const CityLinkButtonFallback = () => {
   return (
-    <div className="row">
+    <div className="row align-items-center">
       <div className="col-7 ">
         name - state
         <br />
-        <i className="font-size-smaller">&nbsp;&nbsp;Population: &nbsp;---</i>
+        <i className="font-size-smaller">Population: ---</i>
       </div>
-      <div className="col-2 ">&nbsp;</div>
+
+      <div className="col-2"></div>
+
       <div className="col-3 align-item-right">
         <AirQualityCircle />
       </div>
@@ -22,12 +24,11 @@ export function CityLinkButton({ cityRec, isPending = false }) {
   //   `CityLinkButton: isPending:${isPending === true ? "true" : "false"}`
   // );
   return (
-    <div className="row">
+    <div className="row align-items-center">
       <div className="col-7 ">
-        {cityRec.city} - {cityRec.state}
-        <br />
+        <h4>{cityRec.city} - {cityRec.state}</h4>
         <i className="font-size-smaller">
-          &nbsp;&nbsp;Population:
+          Population:
           {cityRec.population.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
         </i>
         {ISDEBUGGING === true ? (
@@ -36,6 +37,7 @@ export function CityLinkButton({ cityRec, isPending = false }) {
           <></>
         )}
       </div>
+
       <div className="col-2 ">
         {isPending ? (
           <div className="spinner-border font-size-smaller" role="status">
@@ -43,6 +45,7 @@ export function CityLinkButton({ cityRec, isPending = false }) {
           </div>
         ) : null}
       </div>
+
       <div className="col-3 align-item-right">
         <AirQualityCircle pm25={cityRec.pm25} />
       </div>

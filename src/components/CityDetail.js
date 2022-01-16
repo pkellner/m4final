@@ -10,27 +10,13 @@ import { useContext, Suspense } from "react";
 
 export const CityDetailFallback = () => {
   return (
-    <div className="bg-white right-column mt-1 mb-5">
-      <ul className="list-right-side">
-        <li>
-          <h3 className="mb-1"> City: ...</h3>
-        </li>
-        <br />
-
-        <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
-          <TemperatureDisplayFallback />
-        </li>
-        <br />
-
-        <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
-          <DataStatsDisplayFallback />
-        </li>
-        <br />
-
-        <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
-          <LastHoursDataDisplayFallback />
-        </li>
-        <br />
+    <div className="city-details">
+      <h3> City → ...</h3>
+      <ul>
+        {/* <li></li> */}
+        <li><TemperatureDisplayFallback /></li>
+        <li><DataStatsDisplayFallback /></li>
+        <li><LastHoursDataDisplayFallback /></li>
       </ul>
     </div>
   );
@@ -46,33 +32,25 @@ function ProcessDataAndRender() {
 
   return (
     <Suspense fallback={<CityDetailFallback />}>
-      <div className="bg-white right-column mt-1 mb-5">
-        <ul className="list-right-side">
+      <div className="city-details">
+        <h3> City → {selectedCityName}</h3>
+        <ul>
+          {/* <li></li> */}
           <li>
-            <h3 className="mb-1"> City: {selectedCityName}</h3>
-          </li>
-          <br />
-
-          <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
             {/*<Suspense fallback={<TemperatureDisplayFallback />}>*/}
             <TemperatureDisplay />
             {/*</Suspense>*/}
           </li>
-          <br />
-
-          <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
+          <li>
             {/*<Suspense fallback={<DataStatsDisplayFallback />}>*/}
             <DataStatsDisplay />
             {/*</Suspense>*/}
           </li>
-          <br />
-
-          <li className="list-group-item mt-1 mb-1 border-info  blue-border-rounded">
+          <li>
             <Suspense fallback={<LastHoursDataDisplayFallback />}>
               <LastHoursDataDisplay />
             </Suspense>
           </li>
-          <br />
         </ul>
       </div>
     </Suspense>

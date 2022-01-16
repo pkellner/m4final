@@ -7,7 +7,7 @@ import PagingOffsetLimitControl from "./PagingOffsetLimitControl";
 
 export const LastHoursDataDisplayFallback = () => (
   <div className="fallback-background-color">
-    <table className="table table-responsive w-auto">
+    <table className="table">
       <thead>
         <tr>
           <th>Time</th>
@@ -82,7 +82,7 @@ function LastHoursList({ currentPage }) {
 
   return (
     <div>
-      <table className="table table-responsive w-auto">
+      <table className="table">
         <thead>
           <tr>
             <th>Time</th>

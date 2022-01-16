@@ -9,7 +9,7 @@ export const DataStatsDisplayFallback = () => {
   return (
     <div className="fallback-background-color">
       <h5>PM 2.5 10 Day History Stats</h5>
-      <div className="table-responsive w-auto">
+      <div className="table-responsive">
         <table className="table">
           <thead>
             <tr>
@@ -62,7 +62,7 @@ export default function DataStatsDisplay() {
     return (
       <div>
         <h5>PM 2.5 10 Day History Stats</h5>
-        <div className="table-responsive w-auto">
+        <div className="table-responsive">
           <table className="table">
             <thead>
               <tr>
