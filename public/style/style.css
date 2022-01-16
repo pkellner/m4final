@@ -9,12 +9,19 @@
   - Purple --> Very Unhealthy
   - Maroon --> Hazardous	
   */
-  --aqi-good: #a5d6a7;
+  /* --aqi-good: #a5d6a7;
   --aqi-moderate: #fff59d;
   --aqi-unhealthy-sensitive: #ffcc80;
   --aqi-unhealthy: #ef9a9a;
   --aqi-very-unhealthy: #b39ddb; 
-  --aqi-hazardous: #f48fb1;
+  --aqi-hazardous: #f48fb1; */
+
+  --aqi-good: #00E400;
+  --aqi-moderate: #ffff00;
+  --aqi-unhealthy-sensitive: #ff7e00;
+  --aqi-unhealthy: #ff0000;
+  --aqi-very-unhealthy: #8F3F97; 
+  --aqi-hazardous: #7E0023;
 
 }
 
@@ -395,18 +402,22 @@ input, select {
 
 .circle-stack-sensitive {
   background-color: var(--aqi-unhealthy-sensitive);
+  color: #fff;
 }
 
 .circle-stack-unhealthy {
   background-color: var(--aqi-unhealthy);
+  color: #fff;
 }
 
 .circle-stack-very-unhealthy {
   background-color: var(--aqi-very-unhealthy);
+  color: #fff;
 }
 
 .circle-stack-hazardous {
   background-color: var(--aqi-hazardous);
+  color: #fff;
 }
 
 .circle-stack-default {
