@@ -372,7 +372,7 @@ input, select {
 }
 
 .fallback-background-color {
-  background-color: rgba(169, 169, 169, 0.11);
+  /* background-color: rgba(169, 169, 169, 0.11); */
   padding: 15px;
   /* margin-bottom: 20px; */
   border-radius: 5px;
@@ -425,7 +425,6 @@ input, select {
 }
 
 .points-indicator-gray {
-  color: #263238;
   position: absolute;
   font-weight: 400;
   top: 50%;
