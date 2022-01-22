@@ -7,6 +7,7 @@ class MyDocument extends Document {
     return { ...initialProps };
   }
   render() {
+    // https://www.favicon-generator.org/
     return (
       <Html>
         <Head>
